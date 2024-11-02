@@ -1,6 +1,6 @@
 """
 LeetCode#121
-Given an array where the ith element is the price of a given stock on the  ith day, return the maximum profit achievable buying on one day ad sellig on another day in future
+Given an array where the ith element is the price of a given stock on the  ith day, return the maximum profit achievable buying on one day and sellig on another day in future
 """
 # SOLUTION#1
 def maxProfit(prices):
