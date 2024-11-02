@@ -1,5 +1,5 @@
 """
-Leet Code 1
+Leet Code#1
 nums is an array, target is an integer return the indices of two numbers that add up to target
 
 Assume that:

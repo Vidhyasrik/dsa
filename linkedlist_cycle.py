@@ -1,3 +1,6 @@
+"""
+LeetCode#141
+"""
 def has_cycle(head):
     fast=slow=head
     while fast and fast.next:
