@@ -6,7 +6,8 @@ Each range [a,b] in the list should be output as:
     "a->b" if a != b
     "a" if a == b
 """
-def summaryRanges(nums):
+# Solution#1
+def summaryRanges1(nums):
     result = []
     if not nums:
         return result
@@ -27,4 +28,23 @@ def summaryRanges(nums):
         result.append(f"{start}->{end}")
     return result
 
-print(summaryRanges([0,1,2,4,5,7])) 
+print(summaryRanges1([0,1,2,4,5,7])) 
+
+# Solution#2
+def summaryRanges2(nums):
+    ans=[]
+    i=0
+    while i<len(nums):
+        start = nums[i]
+        while i<len(nums)-1 and nums[i]+1 == nums[i+1]:
+            i+=1
+        if start != nums[i]:
+            ans.append(str(start)+"->"+str(nums[i]))
+        else:
+            ans.append(str(nums[i]))
+        i +=1
+    return ans
+print(summaryRanges2([0,1,2,4,5,7])) 
+
+
+
