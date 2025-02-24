@@ -1,0 +1,14 @@
+"""
+LeetCode#206
+Given the head of a singly linked list, 
+reverse the list, and return the reversed list.
+"""
+
+def reverseList(head):
+    prev,curr=None, head
+    while curr:
+        next_node = curr.next
+        curr.next = prev
+        prev = curr
+        curr = next_node
+    return prev
