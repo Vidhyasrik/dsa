@@ -26,15 +26,11 @@ def hasCycle(head):
     Returns:
         True if the linked list has a cycle, False otherwise.
     """
-    if not head or not head.next:
+    def hasCycle(head):
+        slow, fast = head, head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast:
+                return True
         return False
-
-    slow, fast = head, head.next
-
-    while slow != fast:
-        if not fast or not fast.next:
-            return False
-        slow = slow.next
-        fast = fast.next.next
-
-    return True

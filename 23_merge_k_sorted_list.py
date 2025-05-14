@@ -22,8 +22,6 @@ def mergeKLists(lists):
     for i, node in enumerate(lists):
         min_heap.append((node.val, i, node))
     heapq.heapify(min_heap)
-    for i in min_heap:
-        print(i)
     result = ListNode()
     current = result
     while min_heap:
